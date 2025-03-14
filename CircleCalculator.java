@@ -1,25 +1,22 @@
-public class BooleanExpressionsDemo {
+import java.util.Scanner;
+
+public class CircleCalculator {
     public static void main(String[] args) {
-        boolean isJavaFun = true;
-        boolean isHomeworkTiring = false;
 
-        int a = 15;
-        int b = 20;
+Scanner input = new Scanner(System.in);
+System.out.print("Enter the radius of the circle: ");
 
-        boolean isAGreater = a > b;
-        boolean areEqual = a == b;
-        boolean bothTrue = isJavaFun && (a < b);
-        boolean eitherTrue = isJavaFun || isHomeworkTiring;
-        boolean notTrue = !isHomeworkTiring;
-        boolean exclusiveOr = isJavaFun ^ isHomeworkTiring;
+double radius = input.nextDouble();
+System.out.printf("Radius: %.2f%n", radius);
 
-        System.out.println("Is Java fun? " + isJavaFun);
-        System.out.println("Is homework tiring? " + isHomeworkTiring);
-        System.out.println("Is 'a' greater than 'b'? " + isAGreater);
-        System.out.println("Are 'a' and 'b' equal? " + areEqual);
-        System.out.println("Both conditions (isJavaFun && a<b): " + bothTrue);
-        System.out.println("Either condition (isJavaFun || isHomeworkTiring): " + eitherTrue);
-        System.out.println("Logical NOT of isHomeworkTiring: " + notTrue);
-        System.out.println("Exclusive OR (isJavaFun ^ isHomeworkTiring): " + exclusiveOr);
+double area = Math.PI * Math.pow(radius, 2);
+System.out.printf("Area: %.2f%n", area);
+
+double circumference = 2 * Math.PI * radius;
+System.out.printf("Circumference: %.2f%n", circumference);
+
+
+input.close();
+
     }
 }
